@@ -2,8 +2,14 @@ from django.db import models
 
 # Create your models here.
 
- class  book (models.Model) :
-    name = models.CharField(max_length=200)  # 书名
-    writer = models.CharField(max_length=100)  # 作者
+class   Book(models.Model):
+    # 书名
+    name = models.CharField(max_length=200)
+    # 作者
+    writer = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name +','+self.writer
+
 
 
